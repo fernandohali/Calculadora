@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculadora.js"></script>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="calculadora">
+            <!-- A área onde os resultados serão exibidos -->
+            <p id="soma"></p>
+            <p id="resultado"></p>
+            <table>
+                <tr>
+                    <!-- Botão para limpar a calculadora -->
+                    <td><button class="botao" style="background-color: #FF5959; color: black;"
+                            onclick="clean()">C</button></td>
+                    <!-- Botão para apagar o último caractere -->
+                    <td><button class="botao" style="color: #66FF7F;" onclick="back()">
+                            < </button>
+                    </td>
+                    <!-- Botão para divisão -->
+                    <td><button class="botao" style="color: #66FF7F;" onclick="insert('/')">/</button></td>
+                    <!-- Botão para o operador de porcentagem -->
+                    <td><button class="botao" style="color: #66FF7F;" onclick="insert('%')">%</button></td>
+                </tr>
+                <tr>
+                    <!-- Botões dos números 7, 8 e 9 -->
+                    <td><button class="botao" onclick="insert('7')">7</button></td>
+                    <td><button class="botao" onclick="insert('8')">8</button></td>
+                    <td><button class="botao" onclick="insert('9')">9</button></td>
+                    <!-- Botão para multiplicação -->
+                    <td><button class="botao" style="color: #66FF7F;" onclick="insert('*')">*</button></td>
+                </tr>
+                <tr>
+                    <!-- Botões dos números 4, 5 e 6 -->
+                    <td><button class="botao" onclick="insert('4')">4</button></td>
+                    <td><button class="botao" onclick="insert('5')">5</button></td>
+                    <td><button class="botao" onclick="insert('6')">6</button></td>
+                    <!-- Botão para subtração -->
+                    <td><button class="botao" style="color: #66FF7F;" onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <!-- Botões dos números 1, 2 e 3 -->
+                    <td><button class="botao" onclick="insert('1')">1</button></td>
+                    <td><button class="botao" onclick="insert('2')">2</button></td>
+                    <td><button class="botao" onclick="insert('3')">3</button></td>
+                    <!-- Botão para adição -->
+                    <td><button class="botao" style="color: #66FF7F;" onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <!-- Botão do número 0 que ocupa duas colunas -->
+                    <td colspan="2"><button class="botao" style="width: 102px;" onclick="insert('0')">0</button></td>
+                    <!-- Botão para o ponto decimal -->
+                    <td><button class="botao" onclick="insert('.')">.</button></td>
+                    <!-- Botão para calcular o resultado -->
+                    <td><button class="botao" style="background: #66FF7F;" onclick="calcular()">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
